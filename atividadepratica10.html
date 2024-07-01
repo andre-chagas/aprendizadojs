@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Atividade prática 10</title>
+</head>
+<body>
+	<script>
+		function showCos(number) {
+		  return Math.cos(number);
+		};
+		function randomInt(number) {
+		  return Math.floor(Math.random() * number);
+		};
+		function square(number) {
+		  return Math.sqrt(number);
+		};
+		function showMax(a, b, c) {
+		  return Math.max(a, b, c);
+		};
+
+		var seed = 36;
+		var a = randomInt(seed);
+		var b = randomInt(a);
+		var c = randomInt(b);
+
+		console.log(showCos(seed));
+		console.log(square(seed));
+		console.log(a, b, c);
+		console.log(showMax(a, b, c));
+ 	</script> 
+</body>
+</html>

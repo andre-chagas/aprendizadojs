@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Atividade prática 14</title>
+</head>
+<body>
+	<script>
+		matrizExemplo = [];
+linhas = 4;
+colunas = 5;
+multiple = 1;
+
+for (i = 0; i < linhas; i++){ //Loop através das linhas
+    matrizExemplo[i] = [];
+    multiple++; //Soma mais 1 em "multiple" para iniciar o loop com o numero 2
+    k = 1; //Atribui um valor para K sempre iniciar no mesmo lugar
+    for (j = 0; j < colunas; j++){ //Loop através das colunas
+        while (k < 100){
+            if (k % multiple === 0){
+                matrizExemplo[i][j] = k;
+                k++; //garante que o k vai continuar o loop de onde parou
+                break;
+            }
+            k++;
+        }
+    }
+}
+console.log(matrizExemplo);
+	</script>	
+</body>
+</html>

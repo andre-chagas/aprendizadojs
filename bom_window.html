@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<script>
+		
+		var janela
+
+		function abrirPopUp() {
+			janela = window.open(' ', 'nova_janela',  'window=200, height=100')
+		}
+
+		function fecharPopUp() {
+			janela.close()
+		}
+
+	</script>
+
+</head>
+
+</body>
+	<button onclick="abrirPopUp()">Abrir janela</button>
+	<button onclick="fecharPopUp()">Fechar janela</button>
+	<button onclick="window.print()">Imprimir página</button>
+<body>
+
+</html>

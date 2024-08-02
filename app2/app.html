@@ -7,7 +7,7 @@
 			<link rel="stylesheet"  href="estilo.css" />
 			<script src="jogo.js"></script>
 	</head>
-	<body onresize=" ajustaTamanhoPalcoJogo()">
+	<body onresize="ajustaTamanhoPalcoJogo()">
 
 			<div class="painel">
 				<div class="vidas">
@@ -16,13 +16,15 @@
 					<img id="v3" src="imagens/coracao_cheio.png" />
 				</div>
 
-				<div class="cronometro">Tempo restante: ?</div>
+				<div class="cronometro">Tempo restante: <span id="cronometro"></span></div>
 			</div>
 
 			<script>
-					setInterval(function() {
+					document.getElementById('cronometro').innerHTML = tempo
+
+					var criarMosquito = setInterval(function() {
 					  posicaoRandomica()
-				}, 2000)
+				}, criarMosquitoTempo)
 			</script>
 	</body>
 </html>

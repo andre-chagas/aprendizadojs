@@ -2,7 +2,23 @@
 var altura = 0
 var largura = 0
 var vidas = 1
+var tempo = 15
 
+var criarMosquitoTempo = 1500
+
+var nivel = window.location.search
+nivel = nivel.replace('?', ' ')
+
+if(nivel === 'normal') {
+	//1500
+	criarMosquitoTempo = 1500
+} else if(nivel === 'dificil') {
+	//1000
+	criarMosquitoTempo = 1000
+} else if (nivel === 'chucknorris') {
+	//750
+	criarMosquitoTempo = 750
+}
 
 function ajustaTamanhoPalcoJogo() {
 	 altura = window.innerHeight
@@ -12,6 +28,20 @@ function ajustaTamanhoPalcoJogo() {
 }
 
 ajustaTamanhoPalcoJogo()
+
+var cronometro = setInterval(function() {
+	
+	tempo -= 1
+
+	if(tempo < 0) {
+		clearInterval(cronometro)
+		clearInterval(criarMosquito)
+		window.location.href = 'triunfo.html'
+	} else {
+	document.getElementById('cronometro').innerHTML = tempo
+	}
+
+}, 1000)
 
 function posicaoRandomica() {
 
